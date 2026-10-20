@@ -11,5 +11,53 @@ CHIP Inc16 {
     OUT out[16];
 
     PARTS:
-    //// Replace this comment with your code.
+
+    Not(in=in[0] , out=out[0] );
+    
+    Xor(a=in[0] , b=in[1] , out=out[1] );
+
+    And(a=in[0] , b=in[1] , out= and01 );
+    Xor(a=and01, b=in[2] , out=out[2]);
+
+    And(a=and01 , b=in[2] , out=and012 );
+    Xor(a=and012 , b=in[3] , out=out[3] );
+
+    And(a=and012 , b=in[3] , out=and0123 );
+    Xor(a=and0123 , b=in[4] , out=out[4] );
+
+    And(a=and0123 , b=in[4] , out=and01234 );
+    Xor(a=and01234 , b=in[5] , out=out[5] );
+
+    And(a=and01234 , b=in[5] , out=and012345 );
+    Xor(a=and012345 , b=in[6] , out=out[6] );
+
+    And(a=and012345 , b=in[6] , out=and0123456 );
+    Xor(a=and0123456 , b=in[7] , out=out[7] );
+
+    And(a=and0123456 , b=in[7] , out= and01234567 );
+    Xor(a=and01234567 , b=in[8] , out=out[8] );
+
+    And(a=and01234567 , b=in[8] , out= and012345678 );
+    Xor(a=and012345678 , b=in[9] , out=out[9] );
+
+    And(a=and012345678 , b=in[9] , out= and0123456789 );
+    Xor(a=and0123456789 , b=in[10] , out=out[10] );
+
+    And(a=and0123456789 , b=in[10] , out= and10 );
+    Xor(a=and10 , b=in[11] , out=out[11] );
+
+    And(a=and10, b=in[11] , out= and11 );
+    Xor(a=and11 , b=in[12] , out=out[12] );
+
+    And(a=and11, b=in[12] , out= and12 );
+    Xor(a=and12 , b=in[13] , out=out[13] );
+
+    And(a=and12, b=in[13] , out= and13 );
+    Xor(a=and13 , b=in[14] , out=out[14] );
+
+    And(a=and13, b=in[14] , out= and14 );
+    Xor(a=and14 , b=in[15] , out=out[15] );
+
+    
+
 }
